@@ -1,0 +1,83 @@
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #3b66c3;
+  background: #eaf2ff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(38, 113, 235, 0.3),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 15%,
+      rgba(105, 196, 235, 0.866),
+      transparent 28%
+    ),
+    linear-gradient(135deg, #7dfbee, #7fb6f9);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+/* Fix the Add transaction form layout */
+.transaction-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 20px;
+}
+
+.transaction-form label {
+  display: flex !important;
+  min-width: 0;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 7px;
+  color: #344054;
+  font-weight: 700;
+}
+
+.transaction-form input,
+.transaction-form select {
+  display: block !important;
+  width: 100% !important;
+  min-width: 20px;
+  margin: 0 !important;
+  padding: 11px 12px;
+  border: 1px solid #d5c429;
+  border-radius: 9px;
+  background: #d8ca97;
+}
+
+.transaction-form .primary-button {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 600px) {
+  .transaction-form {
+    grid-template-columns: 1fr;
+  }
+}
